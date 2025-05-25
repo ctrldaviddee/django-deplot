@@ -20,6 +20,8 @@ REPO_DIR = BASE_DIR.parent
 TEMPLATES_DIR = BASE_DIR / 'templates'
 TEMPLATES_DIR.mkdir(parents=True, exist_ok=True)
 
+PROJECT_NAME = config("PROJECT_NAME", default="Unset Project Name")
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
@@ -27,7 +29,7 @@ TEMPLATES_DIR.mkdir(parents=True, exist_ok=True)
 SECRET_KEY = config('SECRET_KEY', cast=str, default=get_random_secret_key())
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config("DEBUG", cast=bool, default=False)
+DEBUG = config("DJANGO_DEBUG", cast=bool, default=False)
 
 ALLOWED_HOSTS = [
     # 'hungrypy.com',
