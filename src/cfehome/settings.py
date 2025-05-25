@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+
+from email.policy import default
 from decouple import config
 from django.core.management.utils import get_random_secret_key
 from pathlib import Path
@@ -95,6 +97,15 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+if DATABASE_URL := config("DATABASE_URL", cast=str, default=''):
+    import dj_database_url
+    if DATABASE_URL.startswith('postgres://') or DATABASE_URL.startswith('postgresql://'):
+        DATABASES = {
+            "default" : dj_database_url.config(
+                default=DATABASE_URL,    
+            )
+        }  
 
 
 # Password validation
