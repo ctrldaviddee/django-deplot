@@ -67,13 +67,14 @@ SECRET_KEY = config('SECRET_KEY', cast=str, default=get_random_secret_key())
 DEBUG = config("DJANGO_DEBUG", cast=bool, default=False)
 
 ALLOWED_HOSTS = [
-    # 'hungrypy.com',
+    '.django-deploy.com',
     # 'www.hungrypy.com',
     '.railway.app',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.railway.app',
+    'https://*.django-deploy.com',
 ]
 
 if DEBUG:
