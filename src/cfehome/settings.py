@@ -77,6 +77,11 @@ CSRF_TRUSTED_ORIGINS = [
     'https://*.django-deploy.com',
 ]
 
+
+# HTTPS
+CSRF_COOKIE_SECURE= not DEBUG
+SECCION_COOKIE_SECURE = not DEBUG
+
 if DEBUG:
     ALLOWED_HOSTS = ['*']
 
