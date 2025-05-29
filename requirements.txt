@@ -5,3 +5,4 @@ dj-database-url
 psycopg[binary]
 whitenoise[brotli]
 django-redis
+django-qstash
