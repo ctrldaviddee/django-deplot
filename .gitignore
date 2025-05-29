@@ -1,5 +1,6 @@
 src/static_root
 .notes.md
+dockerfileV2
 
 # macOS
 .DS_Store
