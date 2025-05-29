@@ -1,7 +1,7 @@
 
 #!/bin/bash
 
-ARG PROJ_NAME="cfehome"
+PROJ_NAME="cfehome"
 
 source /opt/venv/bin/activate
 

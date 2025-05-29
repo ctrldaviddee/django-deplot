@@ -59,6 +59,7 @@ RUN apt-get remove --purge -y \
 
 CMD ["/opt/docker-run.sh"]
 
+# CMD ["/bin/bash/", /opt/docker-run.sh"]
 # database isn't available during build
 # run any other commands that do not need the database
 # such as:
