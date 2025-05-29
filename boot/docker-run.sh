@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 PROJ_NAME="cfehome"
